@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="mem.css">
+    <link rel="stylesheet" type="text/css" href="/morize/mem.css">
 </head>
 
 <body>
@@ -21,10 +21,11 @@
                 echo "<br>";
                 $word = substr($word, $strPos + 1);
             }
+            
         }
-        else {
+        //else {
             echo "<span class = \"reveal\" >" . $word . "</span>" , " ";
-        }
+        //}
     }
     
     ?>
