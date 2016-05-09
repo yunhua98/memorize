@@ -1,0 +1,12 @@
+.reveal{ 
+  color: black; 
+  background-color:black;
+}
+
+.reveal:hover { 
+  background-color:white; 
+  }
+
+p.big {
+    line-height: 2.0;
+}
