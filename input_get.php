@@ -1,11 +1,22 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/morize/mem.css">
+    <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type = "text/javascript">
+        $(function() {
+            var hidden = $('.hidden');
+            var button = $('button.hide')
+            button.on('click', function(){
+                hidden.toggleClass('active');
+            });
+        });
+    </script>
 </head>
 
 <body>
-    
-    <p class = "big">
+    <button class = "hide">Toggle Text</button>
+    <div class = "outputWrapper">
+    <p class = "output">
     
     <?php
     header("Content-Type: text/html; charset=utf-8");
@@ -19,7 +30,7 @@
             for ($i = 0; $i < $numOfNewLines; $i++) {
                 $strPos = strpos($word, PHP_EOL);
                 if(strlen(substr($word, 0, $strPos - 1)) > $wordLength) {
-                    echo "<span class = \"reveal\" >" . stripslashes(utf8_decode(substr($word, 0, $strPos - 1))) . "</span>" , " ";
+                    echo "<span class = \"hidden\" >" . stripslashes(utf8_decode(substr($word, 0, $strPos - 1))) . "</span>" , " ";
                 }
                 else {
                     echo "<span>" . stripslashes(utf8_decode(substr($word, 0, $strPos - 1))) . "</span>" , " ";
@@ -30,7 +41,7 @@
             
         }
         if(strlen($word) > $wordLength) {
-            echo "<span class = \"reveal\" >" . stripslashes(utf8_decode($word)) . "</span>" , " ";
+            echo "<span class = \"hidden\" >" . stripslashes(utf8_decode($word)) . "</span>" , " ";
         }
         else {
             echo "<span>" . stripslashes(utf8_decode($word)) . "</span>" , " ";
@@ -40,6 +51,7 @@
     ?>
 
     </p>
+    </div>
 
 </body>
 </html>

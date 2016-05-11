@@ -1,12 +1,59 @@
-.reveal{ 
-  color: black; 
-  background-color:black;
+body {
+    color: rgb(64, 64, 64);
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: 200;
 }
 
-.reveal:hover { 
-  background-color:white; 
-  }
+.hidden {
+    color: rgb(64, 64, 64); 
+}
 
-p.big {
+.hidden:hover {
+    background-color: white; 
+}
+
+@keyframes cover {
+    from {background-color: rgb(255, 255, 255);}
+    to {background-color: rgb(64, 64, 64);}
+}
+
+.hidden.active {
+    animation: cover 10s;
+    background-color: rgb(64, 64, 64);
+}
+
+p.output {
     line-height: 2.0;
+    text-align: left;
+    padding: 10px;
+}
+
+.outputWrapper {
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3), 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.inputBox {
+    width: 100%;
+    height: 80%;
+    margin: auto;
+}
+
+.numberBox {
+    width: 2.0em;
+}
+
+legend {
+    text-align: left;
 }

@@ -3,20 +3,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href = "mem.css">
 <title>Memorize</title>
 </head>
 
 <body>
     
-     <form action = "input_get.php" method = "post">
+    <div class = "wrapper"> 
+    <form action = "input_get.php" method = "post">
       <fieldset>
-        <legend>Text input</legend>
+        <legend>Input</legend>
         <p>
           <label>Text to Memorize:</label>
             <br>
-          <textarea id = "memText"
-                    rows = "10"
-                    cols = "100"
+          <textarea class = "inputBox"
+                    rows = 10
+                    id = "memText"
                     type = "text"
                     name = "mem"
                     placeholder = "Your text here"></textarea>
@@ -27,15 +29,16 @@
         <fieldset>
          <legend>Settings</legend>
             <p>
-            <label>Cover words longer than: </label>
-                <input id = "wordLengthNumber"
+            <label>Cover words longer than </label>
+                <input class = "numberBox"
+                       id = "wordLengthNumber"
                        type = "number"
                        name = "wordLength"
                        value = 0></input> letters. (Enter 0 to cover all words). <br>
             </p>
          </fieldset>
     </form>
-    
+    </div>
 </body>
 
 </html>
