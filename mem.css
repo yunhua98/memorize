@@ -20,6 +20,15 @@ body {
     to {background-color: rgb(64, 64, 64);}
 }
 
+.hidden:hover {
+    background-color: white; 
+}
+
+@keyframes cover {
+    from {background-color: rgb(255, 255, 255);}
+    to {background-color: rgb(64, 64, 64);}
+}
+
 .hidden.active {
     animation: cover 10s;
     background-color: rgb(64, 64, 64);
